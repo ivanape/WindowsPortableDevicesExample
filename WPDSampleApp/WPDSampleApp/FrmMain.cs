@@ -26,7 +26,6 @@ namespace WPDSampleApp
             devices.ToList().ForEach(device =>
             {
                 device.Connect();
-                //Get Root Folder=> letter unit
                 var contents = device.GetContents();
                 cmbDevices.Items.Add(contents.Files.First().Name + " " + device.FriendlyName);
                 device.Disconnect();
